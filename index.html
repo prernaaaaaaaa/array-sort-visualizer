@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sort Visualiser</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h1>Sort Visualiser</h1>
+    <div class="controls">
+        <div>
+            <label for="sort-type">Type of Sorting Algo</label>
+            <select id="sort-type">
+                <option value="bubble">Bubble Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+            </select>
+        </div>
+        <div>
+            <label for="num-elements">Number of Elements</label>
+            <input type="number" id="num-elements" min="10" max="200" value="10"/>
+        </div>
+        <div>
+            <label for="speed">Speed</label>
+            <select id="speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+        </div>
+        <button class="sort-button" onclick="startSorting()">Sort</button>
+        <button class="stop-button" onclick="stopSorting()">Stop</button>
+        <button class="restart-button" onclick="restartSorting()">Restart</button>
+    </div>
+    <div id="swap-count">Swaps: 0</div>
+    <div id="array-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
